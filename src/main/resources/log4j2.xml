@@ -12,7 +12,7 @@
     </Appenders>
 
     <Loggers>
-        <Logger name= "servlets.GetIndexPageServlet" level="debug" additivity="true">
+        <Logger name= "servlets" level="debug" additivity="true">
             <AppenderRef ref="Console"/>
         </Logger>
 

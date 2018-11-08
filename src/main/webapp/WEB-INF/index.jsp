@@ -14,14 +14,26 @@
 </head>
 <body>
 
-<h1>NewWebServ</h1><br />
+<h1>WebServlet</h1><br />
 
 <h2>Все пользователи</h2><br />
 
 <c:forEach var="user" items="${requestScope.users}">
   <ul>
+
     <li>Имя: <c:out value="${user.name}"/></li>
+
     <li>Возраст: <c:out value="${user.age}"/></li>
+
+    <%--<form method="post" action="<c:url value='/delete'/>">--%>
+      <%--<input type="number" hidden name="id" value="${user.id}" />--%>
+      <%--<input type="submit" name="delete" value="Удалить"/>--%>
+    <%--</form>--%>
+
+    <%--<form method="get" action="<c:url value='/update'/>">--%>
+      <%--<input type="number" hidden name="id" value="${user.id}" />--%>
+      <%--<input type="submit" value="Редактированть"/>--%>
+    <%--</form>--%>
   </ul>
   <hr />
 
@@ -29,7 +41,7 @@
 
 <h2>Создание нового пользователя</h2><br />
 
-<form method="post" action="">
+<form method="post" action="<c:url value='/add_user'/>">
 
   <label><input type="text" name="name"></label>Имя<br>
 
