@@ -3,10 +3,10 @@ package model;
 public class User {
 
     private String name;
-    private Integer age;
-    private Integer id;
+    private int age;
+    private int id;
 
-    public User(String name, Integer age, Integer id) {
+    public User(String name, int age, int id) {
         this.id = id;
         this.name = name;
         this.age = age;

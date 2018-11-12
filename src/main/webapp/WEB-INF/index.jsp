@@ -25,15 +25,15 @@
 
     <li>Возраст: <c:out value="${user.age}"/></li>
 
-    <%--<form method="post" action="<c:url value='/delete'/>">--%>
-      <%--<input type="number" hidden name="id" value="${user.id}" />--%>
-      <%--<input type="submit" name="delete" value="Удалить"/>--%>
-    <%--</form>--%>
+    <form method="post" action="<c:url value='/delete'/>">
+      <input type="number" hidden name="id" value="${user.id}" />
+      <input type="submit" name="delete" value="Удалить"/>
+    </form>
 
-    <%--<form method="get" action="<c:url value='/update'/>">--%>
-      <%--<input type="number" hidden name="id" value="${user.id}" />--%>
-      <%--<input type="submit" value="Редактированть"/>--%>
-    <%--</form>--%>
+    <form method="get" action="<c:url value='/update'/>">
+      <input type="number" hidden name="id" value="${user.id}" />
+      <input type="submit" value="Редактированть"/>
+    </form>
   </ul>
   <hr />
 
