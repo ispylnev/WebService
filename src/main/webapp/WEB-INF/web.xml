@@ -20,4 +20,21 @@
         <servlet-name>AddUserServlet</servlet-name>
         <url-pattern>/add_user</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>DeletUserServlet</servlet-name>
+        <servlet-class>Servlet.DeletUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeletUserServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateUserServlet</servlet-name>
+        <servlet-class>Servlet.UpdateUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateUserServlet</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+
 </web-app>

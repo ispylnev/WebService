@@ -38,14 +38,6 @@ public class GetIndexPageServlet extends HttpServlet {
         logger.info("**Work**");
     }
 
-    private boolean reqIsValid(HttpServletRequest req){
-        final String name = req.getParameter("name");
-        final String age = req.getParameter("age");
-        return name != null && name.length() > 0
-                && age!=null && age.length()>0
-                && age.matches("\\d+");
-
-    }
 
     @Override
     public void destroy() {
