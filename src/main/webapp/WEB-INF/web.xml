@@ -37,4 +37,23 @@
         <url-pattern>/update</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>GetJson</servlet-name>
+        <servlet-class>Servlet.GetJson</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetJson</servlet-name>
+        <url-pattern>/get_json</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>PostJson</servlet-name>
+        <servlet-class>Servlet.PostJson</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PostJson</servlet-name>
+        <url-pattern>/post_json</url-pattern>
+    </servlet-mapping>
+
 </web-app>

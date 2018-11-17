@@ -1,10 +1,17 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonPropertyOrder({ "id", "name", "age"})
 public class User {
 
     private String name;
     private int age;
     private int id;
+
+    public User(){
+
+    }
 
     public User(String name, int age, int id) {
         this.id = id;
@@ -13,9 +20,6 @@ public class User {
 
     }
 
-    public String getName() {
-        return name;
-    }
 
     public Integer getId() {
         return id;
@@ -23,6 +27,9 @@ public class User {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {
