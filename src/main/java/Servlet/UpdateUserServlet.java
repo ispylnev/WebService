@@ -26,11 +26,13 @@ public class UpdateUserServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         final String id = req.getParameter("id");
         if (Utils.rqIsInValid(id,users)){
             resp.sendRedirect(req.getContextPath()+"/");
         }
         User user = users.get(Integer.valueOf(id));
+        req.setAttribute("user",user);
         req.getRequestDispatcher(index).forward(req,resp);
 
     }
