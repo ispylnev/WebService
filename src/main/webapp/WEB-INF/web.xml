@@ -37,6 +37,7 @@
         <url-pattern>/update</url-pattern>
     </servlet-mapping>
 
+
     <servlet>
         <servlet-name>GetJson</servlet-name>
         <servlet-class>Servlet.GetJson</servlet-class>
@@ -55,5 +56,24 @@
         <servlet-name>PostJson</servlet-name>
         <url-pattern>/post_json</url-pattern>
     </servlet-mapping>
+
+
+    <filter>
+        <filter-name>Servlet.ReqEncodingFilter</filter-name>
+        <filter-class>Servlet.ReqEncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Servlet.ReqEncodingFilter</filter-name>
+        <url-pattern>/</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>Servlet.ResEncodingFilter</filter-name>
+        <filter-class>Servlet.ResEncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Servlet.ResEncodingFilter</filter-name>
+        <url-pattern>/</url-pattern>
+    </filter-mapping>
+
 
 </web-app>

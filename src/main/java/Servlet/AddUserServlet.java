@@ -33,7 +33,7 @@ public class AddUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        req.setCharacterEncoding("UTF-8");
+//        req.setCharacterEncoding("UTF-8");
         if(Utils.rqIsValid(req)){
             final String name = req.getParameter("name");
             final String age = req.getParameter("age");
