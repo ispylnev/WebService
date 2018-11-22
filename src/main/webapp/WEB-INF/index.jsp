@@ -50,5 +50,12 @@
   <input type="submit" value="Ok" name="Ok"><br>
 </form>
 
+<form method="post" action="">
+  <input type="text" name="filterUtf8" />
+  <input type="submit" value="Send" />
+</form>
+
+
+
 </body>
 </html>

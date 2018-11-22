@@ -37,6 +37,13 @@ public class GetIndexPageServlet extends HttpServlet {
         logger.info("**Work**");
     }
 
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+       final String text =  req.getParameter("filterUtf8");
+        logger.info(text);
+        resp.sendRedirect(req.getContextPath() + "/");
+    }
+
 
     @Override
     public void destroy() {
