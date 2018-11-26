@@ -23,6 +23,7 @@ public class PostJson extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws
             ServletException, IOException {
        final String json = request.getParameter("data");
+
        User user = new ObjectMapper().readValue(json,User.class);
        final String id = String.valueOf(user.getId());
        final String name = user.getName();

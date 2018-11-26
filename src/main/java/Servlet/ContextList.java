@@ -2,6 +2,9 @@ package Servlet;
 
 import Utils.Utils;
 import model.User;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -9,7 +12,10 @@ import javax.servlet.annotation.WebListener;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 @WebListener
+// With access all servlet
+//fake database connect
 public class ContextList implements ServletContextListener {
+    Logger logger = LogManager.getLogger(ContextList.class);
     private Map<Integer, User> users;
 
     @Override
@@ -20,14 +26,11 @@ public class ContextList implements ServletContextListener {
          users.put(user.getId(),user);
 //         init test user with start any servlet
         context.setAttribute("users",users);
-        System.out.println("Init");
-
-
+        logger.info("contextListner RUN");
     }
 
     @Override
     public void contextDestroyed(ServletContextEvent servletContextEvent) {
-
-        System.out.printf("DestroyContext");
+        logger.info("Destroy ContextListner");
     }
 }
