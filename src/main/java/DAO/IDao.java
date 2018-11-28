@@ -12,5 +12,7 @@ public interface IDao <T> {
 
     T add(Moderator moderator);
 
+    T userIsExist(String login,String password);
+
 
 }

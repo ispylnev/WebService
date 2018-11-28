@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+//post json  without server
 public class PostJson extends HttpServlet {
     Logger logger = LogManager.getLogger(PostJson.class);
     final String index = "/WEB-INF/TestJson.jsp";

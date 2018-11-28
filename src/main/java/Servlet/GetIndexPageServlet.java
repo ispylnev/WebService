@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 
 public class GetIndexPageServlet extends HttpServlet {
-    Logger logger = LogManager.getLogger(GetIndexPageServlet.class);
+   final static Logger logger = LogManager.getLogger(GetIndexPageServlet.class);
     private static String index = "WEB-INF/index.jsp";
     private Map<Integer,User> users;
 

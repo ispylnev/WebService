@@ -52,4 +52,17 @@ public class Dao implements IDao {
        }
        return userList.add(moderator);
     }
+
+    @Override
+    public Boolean userIsExist(String login, String password) {
+        Boolean res = false;
+        for(Moderator user : userList){
+            if (user.getLogin().equals(login) && user.getPassword().equals(password)){
+                res = true;
+            }
+                break;
+        }
+        return res;
+    }
+
 }
