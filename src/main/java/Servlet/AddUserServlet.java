@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class AddUserServlet extends HttpServlet {
-    Logger logger = LogManager.getLogger(AddUserServlet.class);
+  final static  Logger logger = LogManager.getLogger(AddUserServlet.class);
     private Map<Integer, User> users;
     private AtomicInteger id;
 

@@ -29,7 +29,7 @@ public class UpdateUserServlet extends HttpServlet {
 
         final String id = req.getParameter("id");
         if (Utils.rqIsInValid(id,users)){
-            resp.sendRedirect(req.getContextPath()+"/");
+            resp.sendRedirect(req.getContextPath()+"/login_user");
         }
         User user = users.get(Integer.valueOf(id));
         req.setAttribute("user",user);
@@ -44,7 +44,7 @@ public class UpdateUserServlet extends HttpServlet {
         final String name = req.getParameter("name");
         final User user = users.get(Integer.parseInt(id));
         user.setName(name);
-        resp.sendRedirect(req.getContextPath() + "/");
+        resp.sendRedirect(req.getContextPath() + "/login_user");
 
     }
 
