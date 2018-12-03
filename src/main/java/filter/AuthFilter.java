@@ -64,8 +64,7 @@ public class AuthFilter implements Filter {
                            final Moderator.ROLE role) throws ServletException, IOException {
         if (role.equals(Moderator.ROLE.ADMIN)){
 //            req.getRequestDispatcher("WEB-INF/index.jsp").forward(req,res);
-////            res.sendRedirect(req.getContextPath() + "/s");
-//            filterChain.doFilter(req, res);
+//            res.sendRedirect(req.getContextPath() + "/s");
         }else if (role.equals(Moderator.ROLE.USER)){
             req.getRequestDispatcher("WEB-INF/TestJson.jsp").forward(req,res);
             res.sendRedirect(req.getContextPath()+"/");

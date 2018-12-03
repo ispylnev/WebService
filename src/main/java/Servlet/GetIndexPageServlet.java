@@ -37,10 +37,10 @@ public class GetIndexPageServlet extends HttpServlet {
         logger.info("**Work**");
     }
 
-    @Override
+       @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       final String text =  req.getParameter("filterUtf8");
-        logger.info(text);
+//        final String text =  req.getParameter("filterUtf8");
+//        logger.info("было отправлено" + text );
         resp.sendRedirect(req.getContextPath() + "/");
     }
 
